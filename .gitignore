@@ -2,9 +2,13 @@
 /target/debug/build
 /target/debug/deps
 /target/debug/incremental
-/target/debug/.cargo-lock
 /target/debug/.rustc_info.json
 /target/debug/CACHEDIR.TAG
 /target/debug/examples
+/target/x86_64-unknown-linux-gnu/debug/.fingerprint
+/target/x86_64-unknown-linux-gnu/debug/build
+/target/x86_64-unknown-linux-gnu/debug/deps
+/target/x86_64-unknown-linux-gnu/debug/incremental
+/target/x86_64-unknown-linux-gnu/debug/examples
 
 

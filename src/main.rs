@@ -1,5 +1,4 @@
 fn main() {
-    
     let jugadas: [&'static str; 5] = ["piedra", "papel", "tijera", "lagarto", "spock"];
     let mut jugada1 = String::new();
     let mut jugada2 = String::new();
@@ -29,7 +28,7 @@ fn main() {
         loop {
             println!("Jugador 2, ¿Piedra, papel, tijera, lagarto, spock?");
             std::io::stdin().read_line(&mut jugada2).unwrap();
-    
+
             if jugadas.contains(&jugada2.to_lowercase().trim()) {
                 let jugada2_trimmed = jugada2.to_lowercase().trim().to_string();
                 // Guardar jugada en historial
