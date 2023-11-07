@@ -10,34 +10,35 @@ fn main() {
     std::io::stdin().read_line(&mut npartidas).unwrap();
     let mut historial2 = Vec::new();
 
-    for mut i in 0..npartidas.trim().parse::<i32>().unwrap() {
-
+    for mut _i in 0..npartidas.trim().parse::<i32>().unwrap() {
         let mut historial = Vec::new();
         loop {
             println!("Jugador 1, ¿Piedra, papel, tijera, lagarto, spock?");
             std::io::stdin().read_line(&mut jugada1).unwrap();
-            let jugada1_trimmed = jugada1.trim().to_string();
-            if jugadas.contains(&jugada1.trim()) {
+            let jugada1_trimmed = jugada1.to_lowercase().trim().to_string();
+            if jugadas.contains(&jugada1.to_lowercase().trim()) {
                 // Guardar jugada en historial
                 historial.push(jugada1_trimmed);
                 break;
             } else {
                 // Mostrar error
                 println!("{} no es una jugada válida", &jugada1.trim());
+                jugada1.clear();
             }
         }
         loop {
             println!("Jugador 2, ¿Piedra, papel, tijera, lagarto, spock?");
             std::io::stdin().read_line(&mut jugada2).unwrap();
     
-            if jugadas.contains(&jugada2.trim()) {
-                let jugada2_trimmed = jugada2.trim().to_string();
+            if jugadas.contains(&jugada2.to_lowercase().trim()) {
+                let jugada2_trimmed = jugada2.to_lowercase().trim().to_string();
                 // Guardar jugada en historial
                 historial.push(jugada2_trimmed);
                 break;
             } else {
                 // Mostrar error
                 println!("{} no es una jugada válida", &jugada2.trim());
+                jugada2.clear();
             }
         }
         println!("-");
@@ -73,7 +74,7 @@ fn main() {
         jugada1.clear();
         jugada2.clear();
         historial.clear();
-        i += 1;
+        _i += 1;
     }
     println!("Partidas: {:?}", historial2);
 }

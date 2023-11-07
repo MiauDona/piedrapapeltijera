@@ -1,1 +1,10 @@
-/target
+/target/debug/.fingerprint
+/target/debug/build
+/target/debug/deps
+/target/debug/incremental
+/target/debug/.cargo-lock
+/target/debug/.rustc_info.json
+/target/debug/CACHEDIR.TAG
+/target/debug/examples
+
+
